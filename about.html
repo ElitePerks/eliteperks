@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Additional CSS for positioning game buttons */
+        .container {
+            display: flex;
+            justify-content: space-around;
+            background-color: #1c1f2000;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 50px; /* Adjust as needed */
+            width: calc(100% - 20px);
+            left: 10px;
+            right: 10px;
+        }
+
+        .button {
+            flex: 1;
+            text-align: center;
+            margin: 0 5px; /* Adjust the margin as needed */
+        }
+
+        .button a {
+            color: white;
+            text-decoration: none;
+            padding: 15px;
+            background-color: #007bff;
+            display: block;
+            position: relative;
+        }
+
+        .button:hover a {
+            background-color: #007bff; /* Maintain button color on hover */
+        }
+
+        .button::before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: rgba(255, 0, 0, 0);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .button:hover::before {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="social.html"><i class="fas fa-share-alt"></i> Social Media</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>About me content goes here.</p>
+            
+            <!-- Buttons for other games -->
+            <div class="container">
+                <div class="button">
+                    <a href="fight.html">Fight Game</a>
+                </div>
+                <div class="button">
+                    <a href="ballgame.html">Ball Game</a>
+                </div>
+                <div class="button">
+                    <a href="mario.html">Mario Game</a>
+                </div>
+                <div class="button">
+                    <a href="TBD.html">Snake Game</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with <span class="heart">&#x2764;&#xFE0F;</span> by Elite Perks</p>
+    </footer>
+</body>
+</html>
